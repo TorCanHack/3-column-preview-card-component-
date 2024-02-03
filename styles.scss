@@ -1,0 +1,130 @@
+$primarybo: hsl(31, 77%, 52%); 
+$primarydc: hsl(184, 100%, 22%);
+$primaryvdc: hsl(179, 100%, 13%);
+$neutraltw: hsla(0, 0%, 100%, 0.75);
+$neutralvlg: hsl(0, 0%, 95%);
+$mainfont: "Lexend Deca";
+$secondayfont: "Big Shoulders Display";
+$medium: 0.9375rem;
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    margin: 0 auto;
+    width: 340px;
+    display: grid;
+    grid-template-columns: 240px;
+    grid-template-rows: 360px 360px 360px;
+    justify-content: center;
+    background-color: $neutralvlg;
+    padding: 3rem 0;
+    
+    
+
+    p {
+        font-size: $medium;
+        font-family: $mainfont;
+    }
+    h1 {
+        font-family: $secondayfont;
+        font-size: 1.8rem;
+    }
+    
+    
+    
+    .col {
+        padding: 2rem 2rem 2.3rem 2.3rem;
+        color: $neutraltw;
+    }
+
+
+    #sedan {
+        background-color: $primarybo;
+
+        button {
+            color: $primarybo;
+        }
+        
+    }
+
+    #suv {
+        background-color: $primarydc;
+
+        button {
+            color: $primarydc;
+        }
+    }
+
+    #luxury {
+        background-color: $primaryvdc;
+
+        button {
+            color: $primaryvdc;
+        }
+
+    }
+
+    button {
+        height: 2.1rem;
+        width: 7rem;
+        border-radius: 2rem 2rem;
+        border: none;
+
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+
+    button:focus {
+        outline-color: $neutraltw;
+    }
+    
+    button:active {
+        background-color: $neutraltw;
+    }
+}
+
+@media only screen and (min-width: 650px) {
+
+   * {
+    overflow: hidden;
+   }
+
+    .container {
+        grid-template-columns: clamp(15rem, 20%, 37.5rem) clamp(15rem, 20%, 37.5rem) clamp(15rem, 20%, 37.5rem);
+        grid-template-rows: 600px 600px 600px;
+        width: 100%;
+        
+
+        .col {
+            position: relative;
+            top: 50%;
+            padding: 3rem 4rem;
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+                
+                
+            }
+
+            button {
+                margin-top: 8rem;
+                height: 4rem;
+                width: 10rem;
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+   
+    
+}

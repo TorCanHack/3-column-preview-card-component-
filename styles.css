@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  width: 340px;
+  display: grid;
+  grid-template-columns: 240px;
+  grid-template-rows: 360px 360px 360px;
+  justify-content: center;
+  background-color: hsl(0, 0%, 95%);
+  padding: 3rem 0;
+}
+.container p {
+  font-size: 0.9375rem;
+  font-family: "Lexend Deca";
+}
+.container h1 {
+  font-family: "Big Shoulders Display";
+  font-size: 1.8rem;
+}
+.container .col {
+  padding: 2rem 2rem 2.3rem 2.3rem;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.container #sedan {
+  background-color: hsl(31, 77%, 52%);
+}
+.container #sedan button {
+  color: hsl(31, 77%, 52%);
+}
+.container #suv {
+  background-color: hsl(184, 100%, 22%);
+}
+.container #suv button {
+  color: hsl(184, 100%, 22%);
+}
+.container #luxury {
+  background-color: hsl(179, 100%, 13%);
+}
+.container #luxury button {
+  color: hsl(179, 100%, 13%);
+}
+.container button {
+  height: 2.1rem;
+  width: 7rem;
+  border-radius: 2rem 2rem;
+  border: none;
+}
+.container button:hover {
+  cursor: pointer;
+}
+.container button:focus {
+  outline-color: hsla(0, 0%, 100%, 0.75);
+}
+.container button:active {
+  background-color: hsla(0, 0%, 100%, 0.75);
+}
+
+@media only screen and (min-width: 650px) {
+  * {
+    overflow: hidden;
+  }
+  .container {
+    grid-template-columns: clamp(15rem, 20%, 37.5rem) clamp(15rem, 20%, 37.5rem) clamp(15rem, 20%, 37.5rem);
+    grid-template-rows: 600px 600px 600px;
+    width: 100%;
+  }
+  .container .col {
+    position: relative;
+    top: 50%;
+    padding: 3rem 4rem;
+  }
+  .container .col h1 {
+    font-size: 3rem;
+  }
+  .container .col p {
+    font-size: 1.2rem;
+  }
+  .container .col button {
+    margin-top: 8rem;
+    height: 4rem;
+    width: 10rem;
+    font-size: 1.25rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
